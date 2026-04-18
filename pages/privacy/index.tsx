@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { WHITEBUTTONCLASSNAMES } from "@/utils/STATIC-VARIABLES";
 
 export default function PrivacyPolicy() {
   const router = useRouter();
@@ -9,52 +8,56 @@ export default function PrivacyPolicy() {
     {
       title: "Introduction",
       content:
-        "Milk Market is committed to protecting your privacy. As a permissionless marketplace, we minimize data collection and processing to ensure your privacy and security. This policy explains our approach to data handling in the context of a permissionless platform.",
+        "Beef.Money is committed to protecting your privacy. As a permissionless rancher-direct marketplace, we minimize data collection and processing to keep your activity yours. This policy explains our approach in the context of an open, decentralized platform.",
     },
     {
       title: "Information We Don't Collect",
       content:
-        "As a fully permissionless platform with no centralized backend, Milk Market does not collect or store: personal identification information, KYC (Know Your Customer) data, financial information, usage tracking data, or user behavior analytics. All data remains under user control through the Nostr protocol and Bitcoin network.",
+        "Beef.Money does not collect or store: personal identification beyond what you choose to share, KYC data, financial information, behavioral analytics, or third-party tracking pixels. Your messages, listings, and orders live on Nostr and stay under your control.",
     },
     {
       title: "Nostr Protocol Data",
       content:
-        "Communication and listings through the Nostr protocol are distributed across your selected relays and may include: product listings and metadata, public messages and updates, encrypted direct messages (viewable only by intended recipients), and public keys associated with your Nostr identity. Users select which relays to connect to, determining what content they see and share.",
+        "Listings, profiles, and public posts published through Nostr are distributed across your selected relays. Encrypted direct messages (NIP-17) are readable only by the intended recipients. Your Nostr public key is part of your identity. Users select which relays to connect to, which determines what content they publish and see.",
     },
     {
       title: "Bitcoin & Lightning Network Data",
       content:
-        "All transactions occur on the Bitcoin network or Lightning Network and follow their respective privacy models. This may include: transaction amounts, Bitcoin/Lightning addresses or payment requests, and time-stamped records. Cashu ecash transactions provide additional privacy benefits where implemented.",
+        "Crypto transactions occur on the Bitcoin and Lightning Networks and follow their respective privacy models. This may include transaction amounts, Lightning invoices or addresses, and timestamps. Cashu eCash transactions provide additional unlinkability when used.",
     },
     {
-      title: "Website Usage",
+      title: "Account Sign-In",
       content:
-        "Our website interface is static and does not use cookies or tracking mechanisms. Any data stored is kept locally in your browser and includes: local keys (if using in-browser storage), user preferences, relay selections, and interface settings. Milk Market has no access to this locally stored information.",
+        "If you sign in with email or Google, we store your email address to send order notifications, manage account recovery, and enable encrypted messaging on your behalf. We do not sell or share your email. You can request deletion at any time by emailing contact@beef.money.",
+    },
+    {
+      title: "Cookies & Local Storage",
+      content:
+        "Beef.Money uses local browser storage to keep your preferences, relay selections, encrypted keys (if you opt in), cart contents, and interface settings. We do not use third-party analytics cookies. Local data can be cleared from your browser settings at any time.",
     },
     {
       title: "Third-Party Services",
       content:
-        "Users may interact with: Bitcoin network and Lightning Network nodes, Nostr relays (which you select), and self-hosted infrastructure. Each third-party service has its own privacy practices. We recommend reviewing the privacy policies of any relays you connect to or payment processors you utilize.",
+        "You may interact with Bitcoin/Lightning nodes, Nostr relays you select, Stripe (for card payments — see stripe.com/privacy), and SendGrid (for transactional email). Each third-party service has its own privacy practices. We recommend reviewing the policies of the relays and processors you use.",
     },
     {
-      title: "Security Measures",
+      title: "Security",
       content:
-        "Security is maintained through: open-source code verification (our codebase is publicly available for review), cryptographic protocols for secure communications, Bitcoin network security for transactions, and client-side security measures. Users are responsible for maintaining the security of their private keys and wallets.",
+        "Security is maintained through open-source code, cryptographic protocols, Bitcoin network security, PBKDF2 key derivation for encrypted keys, rate limiting on auth endpoints, and client-side cryptography. Users are responsible for safeguarding their private keys and wallet seeds.",
     },
     {
-      title: "User Rights and Control",
+      title: "Your Rights & Control",
       content:
-        "As a permissionless platform, users maintain full control over their: private keys and funds, product listings, relay selections, communication preferences, and local data storage. You can delete local data at any time through your browser settings. Note that due to the nature of distributed systems, messages and listings published to Nostr relays may persist on those relays according to their individual data retention policies.",
+        "You retain full control over your private keys and funds, your listings, your relay selections, your communication preferences, and your local data. You can delete your account-linked email and stop using the platform at any time. Note: data already published to Nostr relays may persist on those relays per their own retention policies.",
     },
     {
-      title: "Changes to Privacy Policy",
+      title: "Changes to This Policy",
       content:
-        "Any updates to this privacy policy will be posted on this page. As a permissionless platform, fundamental changes to data handling are unlikely as the platform operates on open protocols with minimal central coordination.",
+        "Updates will be posted on this page. As a permissionless platform, fundamental changes to data handling are unlikely — the platform operates on open protocols with minimal central coordination.",
     },
     {
-      title: "Contact Information",
-      content:
-        "For privacy-related questions, you can reach the Milk Market team through our Nostr channels or GitHub repository.",
+      title: "Contact",
+      content: "Privacy questions can be sent to contact@beef.money.",
     },
   ];
 
@@ -65,78 +68,63 @@ export default function PrivacyPolicy() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <title>Privacy Policy - Milk Market | Data Protection & Privacy</title>
+        <title>Privacy Policy - Beef.Money | Data Protection</title>
         <meta
           name="description"
-          content="Learn how Milk Market protects your privacy as a permissionless marketplace. Understand our minimal data collection, Nostr protocol privacy, and user control policies."
+          content="Learn how Beef.Money protects your privacy as a permissionless rancher-direct marketplace. Minimal data collection, Nostr-based encryption, user-controlled keys."
         />
-        <link rel="canonical" href="https://milk.market/privacy" />
-        <link rel="apple-touch-icon" href="/milk-market.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/milk-market.png" />
-        <meta property="og:url" content="https://milk.market/privacy" />
+        <link rel="canonical" href="https://beef.money/privacy" />
+        <link rel="apple-touch-icon" href="/beef-initiative-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/beef-initiative-icon.png"
+        />
+        <meta property="og:url" content="https://beef.money/privacy" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Privacy Policy - Milk Market | Data Protection & Privacy"
-        />
+        <meta property="og:title" content="Privacy Policy - Beef.Money" />
         <meta
           property="og:description"
-          content="Learn how Milk Market protects your privacy as a permissionless marketplace. Understand our minimal data collection, Nostr protocol privacy, and user control policies."
+          content="Beef.Money's privacy approach: minimal data, Nostr encryption, user-controlled keys."
         />
-        <meta property="og:image" content="/milk-market.png" />
+        <meta property="og:image" content="/beef-initiative-icon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="https://milk.market" />
-        <meta property="twitter:url" content="https://milk.market/privacy" />
-        <meta
-          name="twitter:title"
-          content="Privacy Policy - Milk Market | Data Protection & Privacy"
-        />
-        <meta
-          name="twitter:description"
-          content="Learn how Milk Market protects your privacy as a permissionless marketplace. Understand our minimal data collection, Nostr protocol privacy, and user control policies."
-        />
-        <meta name="twitter:image" content="/milk-market.png" />
         <meta
           name="keywords"
-          content="privacy policy, milk market, data protection, nostr privacy, permissionless platform, decentralized marketplace, user privacy"
+          content="privacy policy, beef money, data protection, nostr privacy, rancher direct, decentralized marketplace"
         />
       </Head>
-      {/* Main container with new background pattern */}
-      <div className="bg-grid-pattern flex min-h-screen flex-col bg-white py-8 md:pb-20">
-        {/* Centered content with a max-width for readability */}
+      <div className="flex min-h-screen flex-col bg-stone-950 py-8 text-stone-200 md:pb-20">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="mb-12">
-            {/* Back button with new neo-brutalist style */}
             <button
               onClick={() => router.back()}
-              className={`${WHITEBUTTONCLASSNAMES} mb-8 flex items-center gap-2`}
+              className="mb-8 inline-flex items-center gap-2 rounded-md border-2 border-amber-700 bg-stone-900 px-4 py-2 font-bold text-amber-400 transition-all hover:bg-amber-950"
             >
               <ArrowLeftIcon className="h-4 w-4" />
               Back
             </button>
-            <h1 className="text-center text-5xl font-bold text-black">
-              Privacy Policy
+            <h1 className="text-center text-4xl font-black text-white md:text-6xl">
+              Privacy <span className="text-amber-400">Policy</span>
             </h1>
-            <p className="mt-4 text-center text-lg text-zinc-600">
-              How Milk Market protects your privacy
+            <p className="mt-4 text-center text-lg text-stone-400">
+              How Beef.Money protects your privacy
             </p>
-            <p className="mt-2 text-center text-sm text-zinc-500">
-              Last updated: 2025-04-25
+            <p className="mt-2 text-center text-sm text-stone-500">
+              Last updated: April 2026
             </p>
           </div>
 
-          {/* Map through content and create styled cards */}
           <div className="space-y-6">
             {policyContent.map((section) => (
               <div
                 key={section.title}
-                // Applying the new neo-brutalist card style
-                className="shadow-neo rounded-lg border-2 border-black bg-white p-6"
+                className="rounded-lg border-2 border-amber-900 bg-stone-900 p-6"
               >
-                <h3 className="mb-2 text-lg font-bold text-black">
+                <h3 className="mb-2 text-lg font-bold text-amber-400">
                   {section.title}
                 </h3>
-                <p className="leading-relaxed text-zinc-700">
+                <p className="leading-relaxed text-stone-300">
                   {section.content}
                 </p>
               </div>

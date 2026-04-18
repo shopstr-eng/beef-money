@@ -683,59 +683,6 @@ export default function StandaloneLanding() {
         </div>
       </section>
 
-      {/* YouTube Videos Section */}
-      <section className="relative z-10 overflow-hidden border-b-2 border-amber-900 bg-stone-900 py-16">
-        <BrandmarkPattern />
-
-        {/* Background logo watermarks */}
-        <div className="pointer-events-none absolute top-[18%] left-[12%] opacity-[0.06]">
-          <Image
-            src="/beef-initiative-icon.png"
-            alt=""
-            width={100}
-            height={100}
-            className="h-24 w-24"
-            loading="lazy"
-          />
-        </div>
-        <div className="pointer-events-none absolute right-[8%] bottom-[20%] opacity-[0.05]">
-          <Image
-            src="/beef-initiative-icon.png"
-            alt=""
-            width={85}
-            height={85}
-            className="h-20 w-20"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-black text-white md:text-4xl">
-              Latest from Our Channel
-            </h2>
-            <p className="text-lg text-stone-400">
-              Stories from the rancher-direct beef community
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <YouTubeCarousel />
-          </div>
-
-          <div className="mt-8 text-center">
-            <a
-              href="https://www.youtube.com/@milkmarketmedia"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-amber-500 bg-transparent px-6 py-3 font-bold text-amber-400 transition-all hover:bg-amber-900"
-            >
-              Visit Our Channel
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Signup Form Section */}
       <section
         id="signup"

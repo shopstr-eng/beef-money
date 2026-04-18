@@ -3,23 +3,57 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { safeJsonLdString } from "@/utils/safe-json-ld";
-import { WHITEBUTTONCLASSNAMES } from "@/utils/STATIC-VARIABLES";
 
 export default function Faq() {
   const router = useRouter();
   const faqSections = [
     {
-      title: "General Information",
+      title: "General",
       items: [
         {
-          title: "What is Milk Market?",
+          title: "What is Beef.Money?",
           content:
-            "Milk Market is a permissionless marketplace built on Nostr that enables peer-to-peer commerce using Bitcoin. It provides a secure and private way to buy and sell items via the Lightning Network and Cashu token payments.",
+            "Beef.Money is a rancher-direct beef marketplace inspired by the Beef Initiative. It connects American ranchers selling grass-fed, pasture-raised beef directly with the families who eat it — no feedlots, no commodity grading, no grocery-store middlemen. The platform is permissionless, built on the Nostr protocol, and supports payments in Bitcoin, Cashu, fiat, and cards.",
+        },
+        {
+          title: "How is this different from buying beef at the grocery store?",
+          content:
+            "Grocery store beef is typically processed by one of four corporate giants that control roughly 85% of U.S. beef. The animal is often raised hundreds of miles from where it was finished, and the rancher who raised it sees less than 40 cents of every food dollar. On Beef.Money, you buy directly from the rancher, you know the farm, and 100% of the sale goes to the producer.",
+        },
+        {
+          title: "What is the Beef Initiative?",
+          content:
+            "The Beef Initiative is a grassroots movement connecting American ranchers and consumers across all 50 states to rebuild a decentralized, transparent food system. Beef.Money is inspired by their work and shares the same conviction: shorter supply chains produce healthier food and stronger communities. Learn more at beefinitiative.com.",
         },
         {
           title: "What is Nostr?",
           content:
-            "Nostr is a protocol that allows you to take control of your digital identity and data. No one can stop you from posting what you want, and you can use your Nostr keys to sign into any other compatible Nostr applications, taking your content with you.",
+            "Nostr is an open protocol for decentralized communication. It lets you own your identity, your messages, and your data — no platform can deplatform you. Beef.Money is built on Nostr so ranchers can&apos;t be silenced and buyers can communicate privately with end-to-end encrypted messages.",
+        },
+      ],
+    },
+    {
+      title: "Buying Beef",
+      items: [
+        {
+          title: "How do I find a rancher near me?",
+          content:
+            "Visit the Marketplace and browse listings. You can filter by location, cut, and product type. Each listing shows the rancher&apos;s profile, photos of their operation, and pickup or shipping options.",
+        },
+        {
+          title: "Can I buy a whole or half cow?",
+          content:
+            "Yes. Many ranchers offer quarters, halves, and whole cows in addition to individual cuts. Bulk options usually come with a per-pound discount and are typically scheduled ahead of harvest. Look for &ldquo;bulk&rdquo; or &ldquo;quarter / half / whole&rdquo; listings.",
+        },
+        {
+          title: "What about organ meats and bones?",
+          content:
+            "Organ meats, bones for broth, tallow, suet, and other traditional cuts are commonly available. These are the most nutrient-dense parts of the animal and are usually overlooked by industrial supply chains.",
+        },
+        {
+          title: "How do I contact a rancher?",
+          content:
+            "From any listing, click the rancher&apos;s profile to send an encrypted message. You don&apos;t need a Nostr account — if you signed up with email, the messaging works seamlessly. Email notifications are also delivered, so neither side misses an order.",
         },
       ],
     },
@@ -29,77 +63,47 @@ export default function Faq() {
         {
           title: "What payment methods are accepted?",
           content:
-            "Milk Market supports Bitcoin payments through the Lightning Network, Cashu, and Nostr Wallet Connect, as well as credit and debit card payments via Stripe and other fiat options such as Cash App, Venmo, and PayPal. Buyers and sellers can also arrange cash payments directly during pickup or delivery.",
+            "Beef.Money supports Bitcoin via Lightning Network, Cashu eCash tokens, Nostr Wallet Connect (NWC), and traditional fiat through Stripe (credit/debit cards). Many ranchers also accept Cash App, Venmo, PayPal, and direct cash on pickup. Each rancher chooses which methods they accept.",
+        },
+        {
+          title: "Why Bitcoin?",
+          content:
+            "Bitcoin payments are final, censorship-resistant, and settle directly to the rancher with no payment processor taking a cut. Lightning makes the payments instant. For ranchers, Bitcoin means no chargebacks and no payment-processor risk. For buyers, it means real privacy and no middlemen.",
         },
         {
           title: "How do I claim a Cashu payment?",
           content:
-            "You can instantly claim a received Cashu token to the Lightning address set on your Nostr profile by clicking the claim button then the redeem button when on the orders page. You can also receive the token directly into the integrated Cashu wallet and pay out to an external Lightning wallet at any time, or copy and paste the token into an external Cashu wallet (like Minibits, Coinos, cashu.me, etc.). Setting your profile payment preference to Lightning also automatically handles the claiming of tokens for you.",
+            "You can claim a received Cashu token instantly to the Lightning address on your profile by clicking claim → redeem on the orders page. You can also receive directly into the integrated Cashu wallet, or paste the token into an external wallet (Minibits, Coinos, cashu.me, etc.). Setting your profile&apos;s payment preference to Lightning automates the claim flow.",
         },
         {
           title: "What is Nostr Wallet Connect?",
           content:
-            "Nostr Wallet Connect (NIP-47) is a secure protocol that lets you connect your personal Lightning wallet (like Alby or Umbrel) to Milk Market. When you check out, Milk Market will ask your wallet to pay the invoice directly, so you don't have to copy and paste. You can set this up in 'Settings' -> 'Wallet Connection'.",
-        },
-        {
-          title: "Does Milk Market control my funds with NIP-47?",
-          content:
-            "No. Milk Market never sees your private keys or has control of your funds. The NWC connection only gives Milk Market permission to request payments for purchases you initiate. Depending on your wallet settings, you may need to approve each payment, or you can configure a spending budget that allows automatic payments up to a certain amount.",
+            "NWC (NIP-47) lets you connect your personal Lightning wallet (Alby, Umbrel, etc.) to Beef.Money. At checkout, Beef.Money asks your wallet to pay — no copy/paste. You configure permissions in Settings → Wallet Connection. Beef.Money never holds your keys or your funds.",
         },
       ],
     },
     {
-      title: "Selling",
+      title: "Selling (Ranchers)",
       items: [
         {
-          title: "How do I start selling on Milk Market?",
+          title: "How do I start selling on Beef.Money?",
           content:
-            "To start selling, you'll simply need to: 1) Sign in with your email, Google account, or existing Nostr keys, 2) Set up your profile in settings, 3) List your products with descriptions and images, 4) Start receiving orders!",
+            "Sign in with email, Google, or your Nostr keys. Set up your rancher profile with photos of your operation. Add listings for the cuts and bulk options you offer. Start receiving orders. The full walkthrough is in our Producer Guide.",
         },
         {
-          title: "What types of items can I sell?",
+          title: "What can I sell?",
           content:
-            "Milk Market supports various product types related to raw milk and dairy. Each listing should clearly indicate the category and any shipping requirements.",
+            "Beef.Money is built for beef and beef-adjacent products: individual cuts, ground beef, quarters/halves/whole cows, organ meats, bones, tallow, suet, jerky, and similar rancher-made goods. Each listing should accurately describe the product, sourcing, and pickup or shipping logistics.",
         },
         {
           title: "How does shipping work?",
           content:
-            "Sellers can offer different shipping options including free shipping, local pickup, or an added shipping cost. The shipping method and any restrictions should be clearly specified in each listing and fulfillment will be handled by the merchant themselves.",
-        },
-      ],
-    },
-    {
-      title: "Communities",
-      items: [
-        {
-          title: "What are Communities?",
-          content:
-            "Communities are public forums hosted by sellers to interact directly with their customers. Sellers can post announcements, updates, and news about their products, and any user can reply to these announcements to ask questions or give feedback.",
+            "You choose: free shipping, flat-rate shipping, local pickup, or pickup-only. Cold-chain shipping for frozen beef has its own logistics — most ranchers use insulated boxes with dry ice. Fulfillment is handled by you, the rancher.",
         },
         {
-          title: "Who can post in a community?",
+          title: "Do you take a cut of my sales?",
           content:
-            "Only the community creator and designated moderators (typically the seller) can create new top-level posts, which are called 'announcements'. This ensures the main feed stays on-topic with official updates.",
-        },
-        {
-          title: "Who can reply to announcements?",
-          content:
-            "Anyone can reply to an announcement. However, all replies must be approved by a moderator before they become publicly visible. This helps maintain a safe and constructive environment.",
-        },
-        {
-          title: "How do I create my own community?",
-          content:
-            "If you are a seller, you can create and manage your communities by going to 'Settings' -> 'Community Management'. From there, you can create new communities or edit your existing ones.",
-        },
-        {
-          title: "Can I create more than one community?",
-          content:
-            "Yes, sellers can create and manage multiple communities. You can find all of your communities under 'Settings' -> 'Community Management'.",
-        },
-        {
-          title: "How do I delete a community?",
-          content:
-            "You can delete a community you created from the 'Community Management' page in your settings. Please be aware that this action is permanent and cannot be undone.",
+            "No mandatory fees. You can opt in to a donation rate to support the platform, but by default 100% of every sale goes to you. We&apos;d rather build something ranchers want to use than tax their income.",
         },
       ],
     },
@@ -109,50 +113,45 @@ export default function Faq() {
         {
           title: "How do I create an account or sign in?",
           content:
-            "Milk Market offers multiple ways to sign in. You can sign in with your email address or Google account for a familiar experience — no Nostr knowledge required. If you already have a Nostr account, you can sign in using a browser extension (Alby, nos2x, etc.) or bunker application (Amber, nsec.app, etc.) to keep your private key secure. It is also possible to sign in by pasting your nsec and setting a passphrase, but this is not recommended as it could potentially leak your private key.",
+            "Sign in with email, Google, or your existing Nostr keys. If you have a Nostr browser extension (Alby, nos2x) or bunker app (Amber, nsec.app), use those for the most secure setup. You can also paste an nsec with a passphrase, but that&apos;s less recommended.",
         },
         {
-          title: "How are my messages and data kept private?",
+          title: "How is my data kept private?",
           content:
-            "All messages are encrypted using Nostr's encrypted messaging protocol, specifically NIP-17. No one but the parties involved in a transaction can see what is happening. Email notifications are also delivered alongside Nostr DMs so you never miss an important update, even if you're not actively using the app. Your data is stored on your selected relays and isn't accessible by third parties.",
+            "Buyer/rancher messages are end-to-end encrypted using NIP-17. Only you and the other party can read them. Email notifications are sent so you don&apos;t miss orders, but the message contents stay encrypted on Nostr. We don&apos;t sell or share your data.",
         },
         {
-          title: "Why am I unable to view my messages?",
+          title: "Why can&apos;t I view my messages?",
           content:
-            "If you are unable to view order or inquiry messages, this is most likely due to not having NIP-44 encryption/decryption permissions set within your extension or bunker application. Make sure to go into your settings to see if NIP-44 encryption is supported and approve those permissions. If the issue persists, you are also able to view messages via apps like 0xchat, Amethyst, and other Nostr clients as long as they support NIP-17 DMs.",
+            "Usually a NIP-44 permission issue in your Nostr extension or bunker app. Open your signer settings and grant NIP-44 encrypt/decrypt permissions. You can also read messages in any Nostr client that supports NIP-17 DMs (0xchat, Amethyst, etc.).",
         },
       ],
     },
     {
-      title: "Customer Experience",
+      title: "Communities & Reviews",
       items: [
         {
-          title: "Is there a rating system?",
+          title: "What are Communities?",
           content:
-            "Yes, Milk Market implements NIP-85 for reviews, allowing buyers to leave feedback for sellers and their products, helping build trust in the marketplace. To leave a review, find the leave a review button at the bottom of an order message window. Merchants are also able to carry over their reviews to other marketplaces that support NIP-85.",
+            "Public forums hosted by ranchers to talk directly with their customers — share announcements, harvest schedules, herd news, and answer questions. Anyone can reply; replies are moderated by the rancher to keep the feed constructive.",
         },
         {
-          title: "How do I contact a seller?",
+          title: "Can I leave a review?",
           content:
-            "You can contact sellers through Milk Market's encrypted messaging system. Simply navigate to a listing and click on the merchant profile to send a secure message. Messages are sent as encrypted Nostr DMs, and email notifications are also delivered so the seller is alerted even if they're offline. If you signed in with email or Google, all of this works seamlessly without needing a separate Nostr client.",
+            "Yes — Beef.Money uses NIP-85 for reviews. After an order, find the &ldquo;Leave a review&rdquo; button at the bottom of the order chat. Ranchers can carry their reviews to other Nostr marketplaces that support the same standard.",
         },
         {
-          title: "Am I able to return an item?",
+          title: "How do refunds and returns work?",
           content:
-            "You can contact sellers directly in order to request a refund and initiate a return.",
+            "Reach out directly to the rancher through the order chat. Returns and refunds are arranged peer-to-peer. Many ranchers will replace or refund quality issues without question.",
         },
       ],
     },
   ];
 
-  // State to manage which accordion item is open
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const handleToggle = (index: number) => {
+  const handleToggle = (index: number) =>
     setOpenIndex(openIndex === index ? null : index);
-  };
-
-  // A counter to give each FAQ item a unique index across all sections
   let globalItemIndex = 0;
 
   return (
@@ -162,40 +161,30 @@ export default function Faq() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <title>FAQ - Milk Market | Frequently Asked Questions</title>
+        <title>FAQ - Beef.Money | Frequently Asked Questions</title>
         <meta
           name="description"
-          content="Get answers to common questions about Milk Market, the permissionless marketplace for raw dairy products. Learn about payments, selling, account setup, and privacy features."
+          content="Answers about buying real beef from local ranchers on Beef.Money. Learn about payments, selling, accounts, privacy, and the rancher-direct movement."
         />
-        <link rel="canonical" href="https://milk.market/faq" />
-        <link rel="apple-touch-icon" href="/milk-market.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/milk-market.png" />
-        <meta property="og:url" content="https://milk.market/faq" />
+        <link rel="canonical" href="https://beef.money/faq" />
+        <link rel="apple-touch-icon" href="/beef-initiative-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/beef-initiative-icon.png"
+        />
+        <meta property="og:url" content="https://beef.money/faq" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="FAQ - Milk Market | Frequently Asked Questions"
-        />
+        <meta property="og:title" content="FAQ - Beef.Money" />
         <meta
           property="og:description"
-          content="Get answers to common questions about Milk Market, the permissionless marketplace for raw dairy products. Learn about payments, selling, account setup, and privacy features."
+          content="Answers about buying real beef from local ranchers on Beef.Money."
         />
-        <meta property="og:image" content="/milk-market.png" />
+        <meta property="og:image" content="/beef-initiative-icon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="https://milk.market" />
-        <meta property="twitter:url" content="https://milk.market/faq" />
-        <meta
-          name="twitter:title"
-          content="FAQ - Milk Market | Frequently Asked Questions"
-        />
-        <meta
-          name="twitter:description"
-          content="Get answers to common questions about Milk Market, the permissionless marketplace for raw dairy products. Learn about payments, selling, account setup, and privacy features."
-        />
-        <meta name="twitter:image" content="/milk-market.png" />
         <meta
           name="keywords"
-          content="milk market, FAQ, raw dairy, farm-fresh dairy, nostr marketplace, bitcoin payments, lightning network, cashu, peer-to-peer commerce"
+          content="beef money, FAQ, rancher direct, grass fed beef, pasture raised, nostr marketplace, bitcoin beef, beef initiative"
         />
         <script
           type="application/ld+json"
@@ -203,72 +192,67 @@ export default function Faq() {
             __html: safeJsonLdString({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              name: "Milk Market FAQ",
-              url: "https://milk.market/faq",
+              name: "Beef.Money FAQ",
+              url: "https://beef.money/faq",
               mainEntity: faqSections.flatMap((section) =>
                 section.items.map((item) => ({
                   "@type": "Question",
                   name: item.title,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: item.content,
-                  },
+                  acceptedAnswer: { "@type": "Answer", text: item.content },
                 }))
               ),
             }),
           }}
         />
       </Head>
-      {/* Main container with new background pattern */}
-      <div className="bg-grid-pattern flex min-h-screen flex-col bg-white py-8 md:pb-20">
-        {/* Centered content with a smaller max-width for the FAQ layout */}
+      <div className="flex min-h-screen flex-col bg-stone-950 py-8 text-stone-200 md:pb-20">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="mb-12">
-            {/* Back button with new neo-brutalist style */}
             <button
               onClick={() => router.back()}
-              className={`${WHITEBUTTONCLASSNAMES} mb-8 flex items-center gap-2`}
+              className="mb-8 inline-flex items-center gap-2 rounded-md border-2 border-amber-700 bg-stone-900 px-4 py-2 font-bold text-amber-400 transition-all hover:bg-amber-950"
             >
               <ArrowLeftIcon className="h-4 w-4" />
               Back
             </button>
-            <h1 className="text-center text-5xl font-bold text-black">
-              Frequently Asked Questions
+            <h1 className="text-center text-4xl font-black text-white md:text-6xl">
+              Frequently Asked <span className="text-amber-400">Questions</span>
             </h1>
-            <p className="mt-4 text-center text-lg text-zinc-600">
-              Answers to common questions about using Milk Market
+            <p className="mt-4 text-center text-lg text-stone-400">
+              Everything you wanted to know about real beef, real ranchers, and
+              real food freedom.
             </p>
           </div>
 
           {faqSections.map((section) => (
             <div key={section.title} className="mb-12">
-              <h2 className="mb-6 text-2xl font-bold text-black">
+              <h2 className="mb-6 text-2xl font-black text-amber-400">
                 {section.title}
               </h2>
               <div className="space-y-4">
-                {/* Map through items and create accordion */}
                 {section.items.map((item) => {
                   const currentIndex = globalItemIndex++;
                   const isOpen = openIndex === currentIndex;
                   return (
                     <div
                       key={item.title}
-                      className="shadow-neo rounded-lg border-2 border-black bg-white"
+                      className="rounded-lg border-2 border-amber-900 bg-stone-900"
                     >
                       <button
                         onClick={() => handleToggle(currentIndex)}
-                        className="flex w-full items-center justify-between p-4 font-bold text-black"
+                        className="flex w-full items-center justify-between p-4 text-left font-bold text-white"
                       >
                         <span>{item.title}</span>
-                        <span className="text-2xl">{isOpen ? "-" : "+"}</span>
+                        <span className="text-2xl text-amber-400">
+                          {isOpen ? "−" : "+"}
+                        </span>
                       </button>
-                      {/* Content area that slides open/closed */}
                       <div
                         className={`overflow-hidden transition-all duration-300 ease-in-out ${
                           isOpen ? "max-h-screen" : "max-h-0"
                         }`}
                       >
-                        <div className="border-t-2 border-black p-4 text-zinc-700">
+                        <div className="border-t-2 border-amber-900 p-4 leading-relaxed text-stone-300">
                           {item.content}
                         </div>
                       </div>

@@ -98,14 +98,14 @@ const ProducerGuidePage = () => {
       id: "passphrase-faq",
       question: "What is a passphrase? What is it used for?",
       answer:
-        "A passphrase is just a password you create as a user to keep your private key stored safely in your browser so only you can access your account. It is needed for securely sending messages, listing products, or saving profile and shop information on Milk Market.",
+        "A passphrase is just a password you create as a user to keep your private key stored safely in your browser so only you can access your account. It is needed for securely sending messages, listing products, or saving profile and shop information on Beef.Money.",
     },
     {
       id: "payment-methods-faq",
       question: "What payment methods do customers use?",
       answer: (
         <>
-          Milk Market supports Bitcoin payments through Lightning Network and
+          Beef.Money supports Bitcoin payments through Lightning Network and
           Cashu tokens, as well as credit and debit card payments via Stripe.
           You can also arrange cash payments directly with customers during
           pickup or delivery and other payment options like{" "}
@@ -138,9 +138,9 @@ const ProducerGuidePage = () => {
           and transactions and protects your wealth over time. Payment
           processors like Stripe, PayPal, etc. can freeze your funds, close your
           account, or even ban you for selling products they don&apos;t deem
-          acceptable (which raw milk and dairy can easily fall under). If
-          desired, you can exchange it for cash or other currencies at your own
-          pace using tools like{" "}
+          acceptable (which grass-fed beef and rancher products can easily fall
+          under). If desired, you can exchange it for cash or other currencies
+          at your own pace using tools like{" "}
           <a
             href="https://cash.app/bitcoin"
             target="_blank"
@@ -166,7 +166,7 @@ const ProducerGuidePage = () => {
       id: "listing-passphrase-faq",
       question: "What is the listing passphrase? How do I get it?",
       answer:
-        "The listing passphrase is a password set by Milk Market to prevent spam and ensure that trusted producers can list products. You can get it by contacting Milk Market or other producers in the Milk Market community.",
+        "The listing passphrase is a password set by Beef.Money to prevent spam and ensure that trusted producers can list products. You can get it by contacting Beef.Money or other producers in the Beef.Money community.",
     },
     {
       id: "process-payments-faq",
@@ -231,44 +231,48 @@ const ProducerGuidePage = () => {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <title>
-          Producer Guide - Milk Market | Start Selling Farm-Fresh Dairy Products
+          Producer Guide - Beef.Money | Start Selling Grass-Fed Beef Products
         </title>
         <meta
           name="description"
-          content="Learn how to become a producer on Milk Market. Step-by-step guide to selling raw milk and dairy products directly to customers using the permissionless marketplace."
+          content="Learn how to become a producer on Beef.Money. Step-by-step guide to selling grass-fed beef and rancher products directly to customers using the permissionless marketplace."
         />
-        <link rel="canonical" href="https://milk.market/producer-guide" />
-        <link rel="apple-touch-icon" href="/milk-market.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/milk-market.png" />
-        <meta property="og:url" content="https://milk.market/producer-guide" />
+        <link rel="canonical" href="https://beef.money/producer-guide" />
+        <link rel="apple-touch-icon" href="/beef-initiative-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/beef-initiative-icon.png"
+        />
+        <meta property="og:url" content="https://beef.money/producer-guide" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Producer Guide - Milk Market | Start Selling Farm-Fresh Dairy Products"
+          content="Producer Guide - Beef.Money | Start Selling Grass-Fed Beef Products"
         />
         <meta
           property="og:description"
-          content="Learn how to become a producer on Milk Market. Step-by-step guide to selling raw milk and dairy products directly to customers using the permissionless marketplace."
+          content="Learn how to become a producer on Beef.Money. Step-by-step guide to selling grass-fed beef and rancher products directly to customers using the permissionless marketplace."
         />
-        <meta property="og:image" content="/milk-market.png" />
+        <meta property="og:image" content="/beef-initiative-icon.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="https://milk.market" />
+        <meta property="twitter:domain" content="https://beef.money" />
         <meta
           property="twitter:url"
-          content="https://milk.market/producer-guide"
+          content="https://beef.money/producer-guide"
         />
         <meta
           name="twitter:title"
-          content="Producer Guide - Milk Market | Start Selling Farm-Fresh Dairy Products"
+          content="Producer Guide - Beef.Money | Start Selling Grass-Fed Beef Products"
         />
         <meta
           name="twitter:description"
-          content="Learn how to become a producer on Milk Market. Step-by-step guide to selling raw milk and dairy products directly to customers using the permissionless marketplace."
+          content="Learn how to become a producer on Beef.Money. Step-by-step guide to selling grass-fed beef and rancher products directly to customers using the permissionless marketplace."
         />
-        <meta name="twitter:image" content="/milk-market.png" />
+        <meta name="twitter:image" content="/beef-initiative-icon.png" />
         <meta
           name="keywords"
-          content="milk market producer guide, sell raw dairy, sell farm-fresh dairy, bitcoin payments, nostr marketplace, dairy producer, farm to consumer, direct sales, raw milk sales"
+          content="beef money producer guide, sell rancher-direct beef, sell grass-fed beef, bitcoin payments, nostr marketplace, rancher, rancher to consumer, direct sales, grass-fed beef sales"
         />
       </Head>
       <div className="min-h-screen bg-white">
@@ -350,8 +354,8 @@ const ProducerGuidePage = () => {
                   Producer Guide
                 </h1>
                 <p className="text-primary-blue mx-auto max-w-3xl text-lg">
-                  Learn how to start selling your raw dairy products and other
-                  goods on Milk Market.
+                  Learn how to start selling your rancher-direct beef and other
+                  goods on Beef.Money.
                 </p>
               </div>
             </div>
@@ -385,8 +389,8 @@ const ProducerGuidePage = () => {
                       Create Your Account
                     </h3>
                     <p className="mb-4 text-base text-white">
-                      Sign up for Milk Market using your Nostr identity or
-                      create a new one. Your Nostr key ensures secure, private
+                      Sign up for Beef.Money using your Nostr identity or create
+                      a new one. Your Nostr key ensures secure, private
                       communication with customers.
                     </p>
                     <ul className="list-disc space-y-2 pl-6 text-sm text-white">
@@ -442,7 +446,7 @@ const ProducerGuidePage = () => {
                   {[
                     {
                       src: "/sign-in-modal.png",
-                      alt: "Milk Market sign-in modal for new producer account creation",
+                      alt: "Beef.Money sign-in modal for new producer account creation",
                       step: "1.1",
                     },
                     {
@@ -457,7 +461,7 @@ const ProducerGuidePage = () => {
                     },
                     {
                       src: "/shop-page.png",
-                      alt: "Customizable farm shop page for displaying dairy products",
+                      alt: "Customizable rancher shop page for displaying beef products",
                       step: "1.4",
                     },
                   ].map((image, idx) => (
@@ -493,7 +497,7 @@ const ProducerGuidePage = () => {
                       List Your First Product
                     </h3>
                     <p className="mb-4 text-base text-white">
-                      Create detailed product listings that showcase your dairy
+                      Create detailed product listings that showcase your beef
                       products and attract customers.
                     </p>
                     <ul className="list-disc space-y-2 pl-6 text-sm text-white">
@@ -536,12 +540,12 @@ const ProducerGuidePage = () => {
                   {[
                     {
                       src: "/listing-password-modal.png",
-                      alt: "Listing passphrase verification for trusted dairy producers",
+                      alt: "Listing passphrase verification for trusted ranchers",
                       step: "2.1",
                     },
                     {
                       src: "/product-details-form.png",
-                      alt: "Product listing form for raw milk, cheese, and dairy with pricing options",
+                      alt: "Product listing form for grass-fed beef, cheese, and beef with pricing options",
                       step: "2.2",
                     },
                     {
@@ -551,7 +555,7 @@ const ProducerGuidePage = () => {
                     },
                     {
                       src: "/list-product-with-passphrase.png",
-                      alt: "Publishing a new dairy product listing to the Milk Market marketplace",
+                      alt: "Publishing a new beef product listing to the Beef.Money marketplace",
                       step: "2.4",
                     },
                   ].map((image, idx) => (
@@ -627,22 +631,22 @@ const ProducerGuidePage = () => {
                   {[
                     {
                       src: "/fiat-order-chat.png",
-                      alt: "Encrypted chat interface for processing fiat dairy orders",
+                      alt: "Encrypted chat interface for processing fiat beef orders",
                       step: "3.1",
                     },
                     {
                       src: "/bitcoin-order-chat.png",
-                      alt: "Bitcoin Lightning payment order chat with dairy customer",
+                      alt: "Bitcoin Lightning payment order chat with beef customer",
                       step: "3.2",
                     },
                     {
                       src: "/bitcoin-payment-redemption-modal.png",
-                      alt: "Redeeming Bitcoin Cashu payment from dairy product sale",
+                      alt: "Redeeming Bitcoin Cashu payment from beef product sale",
                       step: "3.3",
                     },
                     {
                       src: "/wallet-page.png",
-                      alt: "Milk Market wallet showing Bitcoin and Cashu balance for dairy sales",
+                      alt: "Beef.Money wallet showing Bitcoin and Cashu balance for beef sales",
                       step: "3.4",
                     },
                   ].map((image, idx) => (
@@ -680,7 +684,7 @@ const ProducerGuidePage = () => {
                       </h3>
                       <p className="mb-4 text-base text-white">
                         Build your customer base and expand your reach within
-                        the Milk Market community.
+                        the Beef.Money community.
                       </p>
                       <ul className="list-disc space-y-2 pl-6 text-sm text-white">
                         <li id="step-4-1">
@@ -692,7 +696,7 @@ const ProducerGuidePage = () => {
                         <li id="step-4-3">
                           Share your farm story and practices
                         </li>
-                        <li id="step-4-4">Leverage the Milk Market network</li>
+                        <li id="step-4-4">Leverage the Beef.Money network</li>
                       </ul>
                     </div>
                   </div>
@@ -751,14 +755,14 @@ const ProducerGuidePage = () => {
               </h2>
               <p className="mb-6 text-base text-white">
                 Join the growing community of producers providing fresh, local
-                dairy products directly to consumers.
+                beef products directly to consumers.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button
                   className={PRIMARYBUTTONCLASSNAMES}
                   onClick={() => router.push("/marketplace")}
                 >
-                  Free Milk
+                  Browse Beef
                 </Button>
                 <Button
                   className={WHITEBUTTONCLASSNAMES}

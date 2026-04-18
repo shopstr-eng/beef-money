@@ -2,13 +2,8 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Image } from "@heroui/react";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { safeJsonLdString } from "@/utils/safe-json-ld";
-import {
-  BLACKBUTTONCLASSNAMES,
-  WHITEBUTTONCLASSNAMES,
-} from "@/utils/STATIC-VARIABLES";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -24,50 +19,39 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Milk Market - Get in Touch</title>
+        <title>Contact Beef.Money - Get in Touch</title>
         <meta
           name="description"
-          content="Contact the Milk Market team for questions about our farm-fresh dairy marketplace. Reach us by email, social media, or Nostr. We're here to help farmers and buyers connect."
+          content="Contact the Beef.Money team. Questions about buying real beef from local ranchers, selling on the marketplace, or partnering with us — we're here to help."
         />
-        <link rel="canonical" href="https://milk.market/contact" />
-        <meta
-          property="og:title"
-          content="Contact Milk Market - Get in Touch"
-        />
+        <link rel="canonical" href="https://beef.money/contact" />
+        <meta property="og:title" content="Contact Beef.Money - Get in Touch" />
         <meta
           property="og:description"
-          content="Contact the Milk Market team for questions about our farm-fresh dairy marketplace."
+          content="Contact the Beef.Money team for questions about our rancher-direct beef marketplace."
         />
-        <meta property="og:url" content="https://milk.market/contact" />
+        <meta property="og:url" content="https://beef.money/contact" />
         <meta
           property="og:image"
-          content="https://milk.market/milk-market.png"
+          content="https://beef.money/beef-initiative-icon.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Contact Milk Market - Get in Touch"
-        />
-        <meta
-          name="twitter:description"
-          content="Get in touch with the Milk Market team. Questions about buying, selling, or our platform."
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: safeJsonLdString({
               "@context": "https://schema.org",
               "@type": "ContactPage",
-              name: "Contact Milk Market",
-              url: "https://milk.market/contact",
+              name: "Contact Beef.Money",
+              url: "https://beef.money/contact",
               mainEntity: {
                 "@type": "Organization",
-                name: "Milk Market",
-                email: "freemilk@milk.market",
-                url: "https://milk.market",
+                name: "Beef.Money",
+                email: "contact@beef.money",
+                url: "https://beef.money",
                 contactPoint: {
                   "@type": "ContactPoint",
-                  email: "freemilk@milk.market",
+                  email: "contact@beef.money",
                   contactType: "customer service",
                   availableLanguage: "English",
                 },
@@ -77,152 +61,95 @@ export default function ContactPage() {
         />
       </Head>
 
-      <div className="min-h-screen bg-white font-sans text-black">
+      <div className="min-h-screen bg-stone-950 font-sans text-stone-200">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mb-4">
-            <button
-              onClick={() => router.back()}
-              className={`${WHITEBUTTONCLASSNAMES} mb-8 flex items-center gap-2`}
-            >
-              <ArrowLeftIcon className="h-4 w-4" />
-              Back
-            </button>
-          </div>
+          <button
+            onClick={() => router.back()}
+            className="mb-8 inline-flex items-center gap-2 rounded-md border-2 border-amber-700 bg-stone-900 px-4 py-2 font-bold text-amber-400 transition-all hover:bg-amber-950"
+          >
+            <ArrowLeftIcon className="h-4 w-4" />
+            Back
+          </button>
 
-          <h1 className="mb-4 text-4xl font-black md:text-5xl">Contact Us</h1>
-          <p className="mb-12 text-lg text-zinc-600">
-            Have questions about Milk Market? We&apos;re here to help farmers
-            and buyers connect with confidence.
+          <h1 className="mb-4 text-4xl font-black text-white md:text-6xl">
+            Get in <span className="text-amber-400">Touch</span>
+          </h1>
+          <p className="mb-12 text-lg text-stone-400">
+            Questions about Beef.Money? Whether you&apos;re a rancher, a buyer,
+            or just want to chat about food freedom — we&apos;re listening.
           </p>
 
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-2xl font-black">Get in Touch</h2>
-
+              <h2 className="mb-6 text-2xl font-black text-amber-400">
+                Reach Us Directly
+              </h2>
               <div className="space-y-6">
-                <div className="shadow-neo rounded-lg border-2 border-black bg-white p-6">
-                  <h3 className="mb-2 text-lg font-bold">Email</h3>
+                <div className="rounded-lg border-2 border-amber-900 bg-stone-900 p-6">
+                  <h3 className="mb-2 text-lg font-bold text-white">Email</h3>
                   <a
-                    href="mailto:freemilk@milk.market"
-                    className="text-blue-700 underline"
+                    href="mailto:contact@beef.money"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
                   >
-                    freemilk@milk.market
+                    contact@beef.money
                   </a>
-                  <p className="mt-1 text-sm text-zinc-500">
+                  <p className="mt-2 text-sm text-stone-400">
                     General inquiries, partnerships, and support
                   </p>
                 </div>
 
-                <div className="shadow-neo rounded-lg border-2 border-black bg-white p-6">
-                  <h3 className="mb-2 text-lg font-bold">Nostr</h3>
+                <div className="rounded-lg border-2 border-amber-900 bg-stone-900 p-6">
+                  <h3 className="mb-2 text-lg font-bold text-white">
+                    Rancher Support
+                  </h3>
                   <a
-                    href="https://njump.me/milkmarket@milk.market"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-700 underline"
+                    href="mailto:ranchers@beef.money"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
                   >
-                    <Image
-                      src="/nostr-icon-black-transparent-256x256.png"
-                      alt="Nostr protocol logo"
-                      width={16}
-                      height={16}
-                    />
-                    milkmarket@milk.market
+                    ranchers@beef.money
                   </a>
-                  <p className="mt-1 text-sm text-zinc-500">
-                    Reach us on the Nostr network for encrypted messaging
+                  <p className="mt-2 text-sm text-stone-400">
+                    Onboarding, listings, payouts, and the producer guide
                   </p>
                 </div>
 
-                <div className="shadow-neo rounded-lg border-2 border-black bg-white p-6">
-                  <h3 className="mb-2 text-lg font-bold">Social Media</h3>
-                  <div className="flex flex-wrap gap-4">
-                    <a
-                      href="https://x.com/milkmarketmedia"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-700 underline"
-                    >
-                      <Image
-                        src="/x-logo-black.png"
-                        alt="X (Twitter) logo"
-                        width={16}
-                        height={16}
-                      />
-                      X / Twitter
-                    </a>
-                    <a
-                      href="https://www.youtube.com/@milkmarketmedia"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-700 underline"
-                    >
-                      <Image
-                        src="/youtube-icon.png"
-                        alt="YouTube logo"
-                        width={16}
-                        height={16}
-                      />
-                      YouTube
-                    </a>
-                    <a
-                      href="https://www.instagram.com/milkmarketmedia/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-700 underline"
-                    >
-                      <Image
-                        src="/instagram-icon.png"
-                        alt="Instagram logo"
-                        width={16}
-                        height={16}
-                      />
-                      Instagram
-                    </a>
-                    <a
-                      href="https://www.tiktok.com/@milkmarket.media"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-700 underline"
-                    >
-                      <Image
-                        src="/tiktok-icon.png"
-                        alt="TikTok logo"
-                        width={16}
-                        height={16}
-                      />
-                      TikTok
-                    </a>
-                  </div>
+                <div className="rounded-lg border-2 border-amber-900 bg-stone-900 p-6">
+                  <h3 className="mb-2 text-lg font-bold text-white">Press</h3>
+                  <a
+                    href="mailto:press@beef.money"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
+                  >
+                    press@beef.money
+                  </a>
+                  <p className="mt-2 text-sm text-stone-400">
+                    Media inquiries and interview requests
+                  </p>
                 </div>
 
-                <div className="shadow-neo rounded-lg border-2 border-black bg-white p-6">
-                  <h3 className="mb-2 text-lg font-bold">Open Source</h3>
+                <div className="rounded-lg border-2 border-amber-900 bg-stone-900 p-6">
+                  <h3 className="mb-2 text-lg font-bold text-white">
+                    The Beef Initiative
+                  </h3>
                   <a
-                    href="https://github.com/shopstr-eng/milk-market"
+                    href="https://beefinitiative.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-700 underline"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
                   >
-                    <Image
-                      src="/github-mark.png"
-                      alt="GitHub logo"
-                      width={16}
-                      height={16}
-                    />
-                    View on GitHub
+                    beefinitiative.com
                   </a>
-                  <p className="mt-1 text-sm text-zinc-500">
-                    Report bugs, contribute code, or review our open-source
-                    marketplace
+                  <p className="mt-2 text-sm text-stone-400">
+                    The grassroots rancher movement that inspired this platform
                   </p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h2 className="mb-6 text-2xl font-black">Send a Message</h2>
-              <div className="shadow-neo rounded-lg border-2 border-black bg-white p-6">
+              <h2 className="mb-6 text-2xl font-black text-amber-400">
+                Send a Message
+              </h2>
+              <div className="rounded-lg border-2 border-amber-900 bg-stone-900 p-6">
                 <form
                   onSubmit={async (e) => {
                     e.preventDefault();
@@ -255,7 +182,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="mb-1 block text-sm font-bold"
+                      className="mb-1 block text-sm font-bold text-stone-300"
                     >
                       Name
                     </label>
@@ -265,8 +192,7 @@ export default function ContactPage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your name"
-                      className="shadow-neo w-full rounded-lg border-2 border-black p-3 focus:outline-none"
-                      style={{ backgroundColor: "#f0f0f0" }}
+                      className="w-full rounded-lg border-2 border-stone-700 bg-stone-950 p-3 text-white placeholder-stone-500 focus:border-amber-500 focus:outline-none"
                       required
                     />
                   </div>
@@ -274,7 +200,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="mb-1 block text-sm font-bold"
+                      className="mb-1 block text-sm font-bold text-stone-300"
                     >
                       Email
                     </label>
@@ -284,8 +210,7 @@ export default function ContactPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
-                      className="shadow-neo w-full rounded-lg border-2 border-black p-3 focus:outline-none"
-                      style={{ backgroundColor: "#f0f0f0" }}
+                      className="w-full rounded-lg border-2 border-stone-700 bg-stone-950 p-3 text-white placeholder-stone-500 focus:border-amber-500 focus:outline-none"
                       required
                     />
                   </div>
@@ -293,7 +218,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="mb-1 block text-sm font-bold"
+                      className="mb-1 block text-sm font-bold text-stone-300"
                     >
                       Subject
                     </label>
@@ -301,13 +226,12 @@ export default function ContactPage() {
                       id="subject"
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
-                      className="shadow-neo w-full rounded-lg border-2 border-black p-3 focus:outline-none"
-                      style={{ backgroundColor: "#f0f0f0" }}
+                      className="w-full rounded-lg border-2 border-stone-700 bg-stone-950 p-3 text-white focus:border-amber-500 focus:outline-none"
                     >
                       <option value="">Select a topic</option>
                       <option value="Buying Inquiry">Buying Inquiry</option>
-                      <option value="Selling / Producer Question">
-                        Selling / Producer Question
+                      <option value="Rancher / Producer Question">
+                        Rancher / Producer Question
                       </option>
                       <option value="Partnership">Partnership</option>
                       <option value="Technical Support">
@@ -321,7 +245,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="mb-1 block text-sm font-bold"
+                      className="mb-1 block text-sm font-bold text-stone-300"
                     >
                       Message
                     </label>
@@ -331,20 +255,19 @@ export default function ContactPage() {
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="How can we help?"
                       rows={5}
-                      className="shadow-neo w-full rounded-lg border-2 border-black p-3 focus:outline-none"
-                      style={{ backgroundColor: "#f0f0f0" }}
+                      className="w-full rounded-lg border-2 border-stone-700 bg-stone-950 p-3 text-white placeholder-stone-500 focus:border-amber-500 focus:outline-none"
                       required
                     />
                   </div>
 
                   {status === "sent" && (
-                    <div className="rounded-lg border-2 border-green-600 bg-green-50 p-3 text-center text-sm font-bold text-green-800">
+                    <div className="rounded-lg border-2 border-amber-500 bg-amber-950 p-3 text-center text-sm font-bold text-amber-300">
                       Message sent! We&apos;ll get back to you soon.
                     </div>
                   )}
 
                   {status === "error" && (
-                    <div className="rounded-lg border-2 border-red-600 bg-red-50 p-3 text-center text-sm font-bold text-red-800">
+                    <div className="rounded-lg border-2 border-red-600 bg-red-950 p-3 text-center text-sm font-bold text-red-300">
                       {errorMessage}
                     </div>
                   )}
@@ -352,7 +275,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className={`${BLACKBUTTONCLASSNAMES} w-full disabled:opacity-50`}
+                    className="w-full rounded-lg border-2 border-amber-500 bg-amber-500 px-6 py-3 font-bold text-stone-950 transition-all hover:bg-amber-400 disabled:opacity-50"
                   >
                     {status === "sending" ? "Sending..." : "Send Message"}
                   </button>
@@ -361,42 +284,48 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <section className="shadow-neo mt-12 rounded-lg border-2 border-black bg-zinc-50 p-8">
-            <h2 className="mb-4 text-2xl font-black">Frequently Asked</h2>
-            <div className="grid gap-4 md:grid-cols-2">
+          <section className="mt-12 rounded-lg border-2 border-amber-900 bg-stone-900 p-8">
+            <h2 className="mb-6 text-2xl font-black text-amber-400">
+              Quick Links
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <h3 className="font-bold">Are you a farmer looking to sell?</h3>
-                <p className="text-sm text-zinc-600">
-                  Check out our{" "}
+                <h3 className="font-bold text-white">
+                  Are you a rancher looking to sell?
+                </h3>
+                <p className="mt-1 text-sm text-stone-400">
+                  Read our{" "}
                   <Link
                     href="/producer-guide"
-                    className="font-bold text-blue-700 underline"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
                   >
                     Producer Guide
                   </Link>{" "}
-                  for step-by-step instructions on listing your products.
+                  to start listing your beef.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold">Want to browse local dairy?</h3>
-                <p className="text-sm text-zinc-600">
+                <h3 className="font-bold text-white">
+                  Want to find local beef?
+                </h3>
+                <p className="mt-1 text-sm text-stone-400">
                   Head to the{" "}
                   <Link
                     href="/marketplace"
-                    className="font-bold text-blue-700 underline"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
                   >
                     Marketplace
                   </Link>{" "}
-                  to find farms near you.
+                  to discover ranchers near you.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold">Need help with your account?</h3>
-                <p className="text-sm text-zinc-600">
+                <h3 className="font-bold text-white">Need account help?</h3>
+                <p className="mt-1 text-sm text-stone-400">
                   Visit our{" "}
                   <Link
                     href="/faq"
-                    className="font-bold text-blue-700 underline"
+                    className="font-bold text-amber-400 underline hover:text-amber-300"
                   >
                     FAQ page
                   </Link>{" "}
@@ -404,10 +333,10 @@ export default function ContactPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold">Interested in custom domains?</h3>
-                <p className="text-sm text-zinc-600">
-                  Sellers can request custom domains for their storefronts.
-                  Email us for details.
+                <h3 className="font-bold text-white">Custom storefronts?</h3>
+                <p className="mt-1 text-sm text-stone-400">
+                  Ranchers can request a custom domain for their shop. Email
+                  ranchers@beef.money for details.
                 </p>
               </div>
             </div>
