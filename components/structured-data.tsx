@@ -5,42 +5,41 @@ import { safeJsonLdString } from "@/utils/safe-json-ld";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Milk Market",
-  url: "https://milk.market",
-  logo: "https://milk.market/milk-market.png",
+  name: "Beef.Money",
+  url: "https://beef.money",
+  logo: "https://beef.money/beef-initiative-icon.png",
   description:
-    "Milk Market is a decentralized, permissionless marketplace connecting local dairy farmers directly with consumers. Zero platform fees, direct payments via Bitcoin and traditional methods.",
+    "Beef.Money is a decentralized, permissionless marketplace connecting local ranchers directly with consumers. Zero platform fees, direct payments via Bitcoin and traditional methods.",
   foundingDate: "2024",
   contactPoint: {
     "@type": "ContactPoint",
-    email: "freemilk@milk.market",
+    email: "info@beef.money",
     contactType: "customer service",
     availableLanguage: "English",
   },
   sameAs: [
     "https://github.com/shopstr-eng/milk-market",
-    "https://x.com/milkmarketmedia",
-    "https://www.youtube.com/@milkmarketmedia",
-    "https://www.instagram.com/milkmarketmedia/",
-    "https://www.tiktok.com/@milkmarket.media",
+    "https://x.com/beefinitiative",
+    "https://www.youtube.com/@beefinitiative",
+    "https://www.instagram.com/beefinitiative/",
   ],
   founder: {
     "@type": "Person",
-    name: "Milk Market Team",
+    name: "Beef.Money Team",
     description:
-      "Advocates for food sovereignty and direct farm-to-consumer commerce, with expertise in decentralized marketplace technology and dairy supply chains.",
+      "Advocates for food sovereignty and direct farm-to-consumer commerce, with expertise in decentralized marketplace technology and beef supply chains.",
   },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Milk Market",
-  url: "https://milk.market",
-  logo: "https://milk.market/milk-market.png",
-  image: "https://milk.market/milk-market.png",
+  name: "Beef.Money",
+  url: "https://beef.money",
+  logo: "https://beef.money/beef-initiative-icon.png",
+  image: "https://beef.money/beef-initiative-icon.png",
   description:
-    "Farm-fresh dairy marketplace connecting local farmers with buyers. Browse raw milk, cheese, butter, and more from trusted local producers with zero platform fees.",
+    "Rancher-direct beef marketplace connecting local ranchers with buyers. Browse grass-fed beef, pasture-raised cuts, and more from trusted local producers with zero platform fees.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Seattle",
@@ -74,18 +73,18 @@ const homepageFaqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Is raw milk legal in my state?",
+      name: "Can I buy beef directly from a rancher?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raw milk laws vary by state. Some states allow retail sales, others permit farm sales only, and some restrict it entirely. Check your local regulations. Milk Market simply connects buyers with local farmers - you arrange the transaction directly.",
+        text: "Yes. Beef.Money connects you directly with ranchers who sell their beef without middlemen. You arrange the transaction directly with the rancher — no platform cuts, no corporate intermediaries.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I pay the farmer?",
+      name: "How do I pay the rancher?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You pay the farmer directly using whatever method you both agree on - Bitcoin, cash, or other digital payment methods. There are no mandatory platform fees. Farmers may choose to set an optional donation rate to help support the site, but that's entirely up to them.",
+        text: "You pay the rancher directly using whatever method you both agree on — Bitcoin, cash, or other digital payment methods. There are no mandatory platform fees. Ranchers may choose to set an optional donation rate to help support the site, but that's entirely up to them.",
       },
     },
     {
@@ -98,18 +97,18 @@ const homepageFaqSchema = {
     },
     {
       "@type": "Question",
-      name: "How fresh is the dairy?",
+      name: "What kinds of beef can I buy?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "That depends on the farmer you choose. Most farms offer dairy that's just days old - far fresher than the weeks-old products you'd find at a grocery store. You can ask your farmer directly about their freshness and handling practices.",
+        text: "That depends on the rancher you choose. Many offer whole or half cows, individual cuts, ground beef, organ meats, and more — all pasture-raised and grass-fed. You can ask your rancher directly about their practices.",
       },
     },
     {
       "@type": "Question",
-      name: "I'm a farmer. How do I list my products?",
+      name: "I'm a rancher. How do I list my products?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It's free and takes just a few minutes. Click 'Sell Your Dairy' in the navigation, create your profile, and start adding products. You set your own prices, delivery options, and payment methods.",
+        text: "It's free and takes just a few minutes. Click 'Sell Your Beef' in the navigation, create your profile, and start adding products. You set your own prices, pickup options, and payment methods.",
       },
     },
   ],
@@ -118,15 +117,15 @@ const homepageFaqSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Milk Market",
-  url: "https://milk.market",
+  name: "Beef.Money",
+  url: "https://beef.money",
   description:
-    "Farm-fresh dairy marketplace. Buy raw milk, cheese, and dairy products direct from local farmers with zero platform fees.",
+    "Rancher-direct beef marketplace. Buy grass-fed beef and pasture-raised cuts direct from local ranchers with zero platform fees.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://milk.market/marketplace?q={search_term_string}",
+      urlTemplate: "https://beef.money/marketplace?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

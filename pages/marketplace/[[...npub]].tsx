@@ -24,7 +24,7 @@ function shopEventToOgMeta(
     return {
       title: content.name ? `${content.name} Shop` : "Milk Market Shop",
       description: content.about || "Check out this shop on Milk Market!",
-      image: content.ui?.picture || "/milk-market.png",
+      image: content.ui?.picture || "/beef-initiative-icon.png",
       url: urlPath,
     };
   } catch {

@@ -50,7 +50,7 @@ export const getServerSideProps: GetServerSideProps<ShopPageProps> = async (
                 seo?.ogImage ||
                 content.ui?.banner ||
                 content.ui?.picture ||
-                "/milk-market.png",
+                "/beef-initiative-icon.png",
               url: `/shop/${shopSlug}`,
               keywords:
                 seo?.keywords ||

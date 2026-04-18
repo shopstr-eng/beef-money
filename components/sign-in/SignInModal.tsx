@@ -441,14 +441,14 @@ export default function SignInModal({
               <div className="flex flex-col items-center justify-center space-y-6 py-8">
                 <div className="flex items-center justify-center">
                   <Image
-                    alt="Milk Market logo"
+                    alt="Beef.Money logo"
                     height={80}
                     radius="sm"
-                    src="/milk-market.png"
+                    src="/beef-initiative-icon.png"
                     width={80}
                   />
                   <h1 className="ml-3 text-4xl font-bold text-black">
-                    Milk Market
+                    Beef.Money
                   </h1>
                 </div>
 
@@ -461,7 +461,7 @@ export default function SignInModal({
                 <div className="flex w-full max-w-md flex-col space-y-4">
                   <div className="text-center">
                     <p className="mb-2 text-lg font-bold text-black">
-                      New to Milk Market?
+                      New to Beef.Money?
                     </p>
                     <p className="mb-4 text-sm text-black">
                       Sign up to get started!
@@ -497,10 +497,10 @@ export default function SignInModal({
                 <div className="space-y-3">
                   <div className="mb-3 flex items-center justify-center gap-3">
                     <Image
-                      alt="Milk Market logo"
+                      alt="Beef.Money logo"
                       height={50}
                       radius="sm"
-                      src="/milk-market.png"
+                      src="/beef-initiative-icon.png"
                       width={50}
                     />
                     <div className="text-2xl font-bold text-black">Sign Up</div>
@@ -570,10 +570,10 @@ export default function SignInModal({
                 <div className="space-y-3">
                   <div className="mb-3 flex items-center justify-center gap-3">
                     <Image
-                      alt="Milk Market logo"
+                      alt="Beef.Money logo"
                       height={50}
                       radius="sm"
-                      src="/milk-market.png"
+                      src="/beef-initiative-icon.png"
                       width={50}
                     />
                     <div className="text-2xl font-bold text-black">
@@ -811,14 +811,14 @@ export default function SignInModal({
                 <div className="space-y-3">
                   <div className="mb-3 flex items-center justify-center gap-3">
                     <Image
-                      alt="Milk Market logo"
+                      alt="Beef.Money logo"
                       height={50}
                       radius="sm"
-                      src="/milk-market.png"
+                      src="/beef-initiative-icon.png"
                       width={50}
                     />
                     <div className="text-2xl font-bold text-black">
-                      Milk Market
+                      Beef.Money
                     </div>
                   </div>
 
@@ -1065,10 +1065,10 @@ export default function SignInModal({
                 <div className="space-y-3">
                   <div className="mb-3 flex items-center justify-center gap-3">
                     <Image
-                      alt="Milk Market logo"
+                      alt="Beef.Money logo"
                       height={50}
                       radius="sm"
-                      src="/milk-market.png"
+                      src="/beef-initiative-icon.png"
                       width={50}
                     />
                     <div className="text-2xl font-bold text-black">

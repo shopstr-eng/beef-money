@@ -13,7 +13,7 @@ export type OgMetaProps = {
   type?: string;
 };
 
-const BASE_URL = "https://milk.market";
+const BASE_URL = "https://beef.money";
 
 function ensureAbsoluteUrl(url: string, base: string): string {
   if (!url) return "";
@@ -36,7 +36,7 @@ export default function OgHead({
   const absoluteImage = ensureAbsoluteUrl(image, BASE_URL);
   const absoluteUrl = ensureAbsoluteUrl(url, BASE_URL);
   const ogType = type || "website";
-  const ogSiteName = siteName || "Milk Market";
+  const ogSiteName = siteName || "Beef.Money";
   const ogLocale = locale || "en_US";
 
   const geoPlaceName = [locationCity, locationRegion]
@@ -60,7 +60,7 @@ export default function OgHead({
       <meta property="og:locale" content={ogLocale} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content="milk.market" />
+      <meta property="twitter:domain" content="beef.money" />
       <meta property="twitter:url" content={absoluteUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -74,9 +74,9 @@ export default function OgHead({
 }
 
 export const DEFAULT_OG: OgMetaProps = {
-  title: "Milk Market - Farm-Fresh Dairy Direct from Local Farmers",
+  title: "Beef.Money - Rancher-Direct Beef & Food Freedom Marketplace",
   description:
-    "Buy farm-fresh, raw milk and dairy products direct from local farmers. Connecting consumers to trusted dairy producers with sovereignty and community in mind.",
-  image: "/milk-market.png",
+    "Buy pasture-raised, grass-fed beef direct from local ranchers. Connecting consumers to trusted beef producers with sovereignty and food freedom in mind.",
+  image: "/beef-initiative-icon.png",
   url: "/",
 };

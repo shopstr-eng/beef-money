@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps<
                 description:
                   community.description ||
                   "Check out this community on Milk Market!",
-                image: community.image || "/milk-market.png",
+                image: community.image || "/beef-initiative-icon.png",
                 url: `/communities/${naddrStr}`,
               },
             },

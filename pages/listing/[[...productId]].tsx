@@ -93,7 +93,7 @@ function eventToOgMeta(event: NostrEvent, urlPath: string): OgMetaProps {
       title: productData.title || "Milk Market Listing",
       description:
         productData.summary || "Check out this product on Milk Market!",
-      image: productData.images?.[0] || "/milk-market.png",
+      image: productData.images?.[0] || "/beef-initiative-icon.png",
       url: urlPath,
     };
   }

@@ -22,7 +22,7 @@ type MetaTagsType = {
   url: string;
 };
 
-const BASE_URL = "https://milk.market";
+const BASE_URL = "https://beef.money";
 
 function ensureAbsoluteUrl(url: string, base: string): string {
   if (!url) return "";
@@ -41,7 +41,7 @@ const getMetaTags = (
   const defaultTags = {
     title: DEFAULT_OG.title,
     description: DEFAULT_OG.description,
-    image: ensureAbsoluteUrl("/milk-market.png", BASE_URL),
+    image: ensureAbsoluteUrl("/beef-initiative-icon.png", BASE_URL),
     url: `${windowOrigin}`,
   };
 
@@ -87,11 +87,11 @@ const getMetaTags = (
     if (productData) {
       const slug = getListingSlug(productData, allParsed);
       return {
-        title: productData.title || "Milk Market Listing",
+        title: productData.title || "Beef.Money Listing",
         description:
-          productData.summary || "Check out this product on Milk Market!",
+          productData.summary || "Check out this product on Beef.Money!",
         image: ensureAbsoluteUrl(
-          productData.images?.[0] || "/milk-market.png",
+          productData.images?.[0] || "/beef-initiative-icon.png",
           BASE_URL
         ),
         url: `${windowOrigin}/listing/${slug || productId}`,
@@ -100,8 +100,8 @@ const getMetaTags = (
 
     return {
       ...defaultTags,
-      title: "Milk Market Listing",
-      description: "Check out this listing on Milk Market!",
+      title: "Beef.Money Listing",
+      description: "Check out this listing on Beef.Money!",
     };
   } else if (pathname.startsWith("/marketplace/") && query.npub?.[0]) {
     const slug = query.npub[0];
@@ -121,11 +121,11 @@ const getMetaTags = (
     if (shopInfo) {
       const profileSlug = getProfileSlug(shopInfo.pubkey, profileData);
       return {
-        title: `${shopInfo.content.name} Shop` || "Milk Market Shop",
+        title: `${shopInfo.content.name} Shop` || "Beef.Money Shop",
         description:
-          shopInfo.content.about || "Check out this shop on Milk Market!",
+          shopInfo.content.about || "Check out this shop on Beef.Money!",
         image: ensureAbsoluteUrl(
-          shopInfo.content.ui.picture || "/milk-market.png",
+          shopInfo.content.ui.picture || "/beef-initiative-icon.png",
           BASE_URL
         ),
         url: `${windowOrigin}/marketplace/${profileSlug}`,
@@ -133,8 +133,8 @@ const getMetaTags = (
     }
     return {
       ...defaultTags,
-      title: "Milk Market Shop",
-      description: "Check out this shop on Milk Market!",
+      title: "Beef.Money Shop",
+      description: "Check out this shop on Beef.Money!",
     };
   }
 
@@ -186,8 +186,12 @@ const DynamicHead = ({
       <title>{metaTags.title}</title>
       <meta name="description" content={metaTags.description} />
       <link rel="canonical" href={metaTags.url} />
-      <link rel="apple-touch-icon" href="/milk-market.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/milk-market.png" />
+      <link rel="apple-touch-icon" href="/beef-initiative-icon.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/beef-initiative-icon.png"
+      />
       <meta property="og:url" content={metaTags.url} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={metaTags.title} />

@@ -205,14 +205,16 @@ const TopNav = ({
             className="hover:text-primary-yellow flex items-center bg-transparent text-white duration-200"
           >
             <Image
-              alt="Milk Market logo"
+              alt="Beef.Money logo"
               height={40}
               radius="sm"
-              src={shopLogoURL != "" ? shopLogoURL : "/milk-market.png"}
+              src={
+                shopLogoURL != "" ? shopLogoURL : "/beef-initiative-icon.png"
+              }
               width={40}
             />
             <span className="ml-2 text-xl text-white md:hidden lg:flex">
-              {shopName != "" ? shopName : "Milk Market"}
+              {shopName != "" ? shopName : "Beef.Money"}
             </span>
           </Button>
         </div>

@@ -329,7 +329,7 @@ const ShopProfileForm = ({ isOnboarding = false }: ShopProfileFormProps) => {
 
   const watchBanner = watch("banner");
   const watchPicture = watch("picture");
-  const defaultImage = "/milk-market.png";
+  const defaultImage = "/beef-initiative-icon.png";
 
   // Tracks whether relay-context data has been applied so DB pre-load doesn't
   // override more authoritative data that arrived later.
