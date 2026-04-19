@@ -303,7 +303,6 @@ export default function StandaloneLanding() {
             width={120}
             height={120}
             className="h-30 w-30"
-            loading="lazy"
           />
         </div>
         <div className="pointer-events-none absolute top-[15%] right-[8%] opacity-[0.05]">
@@ -323,7 +322,6 @@ export default function StandaloneLanding() {
             width={100}
             height={100}
             className="h-24 w-24"
-            loading="lazy"
           />
         </div>
         <div className="pointer-events-none absolute right-[14%] bottom-[8%] opacity-[0.05]">
@@ -333,7 +331,6 @@ export default function StandaloneLanding() {
             width={90}
             height={90}
             className="h-22 w-22"
-            loading="lazy"
           />
         </div>
 
@@ -508,7 +505,6 @@ export default function StandaloneLanding() {
             width={110}
             height={110}
             className="h-28 w-28"
-            loading="lazy"
           />
         </div>
         <div className="pointer-events-none absolute right-[10%] bottom-[15%] opacity-[0.05]">
@@ -518,7 +514,6 @@ export default function StandaloneLanding() {
             width={90}
             height={90}
             className="h-22 w-22"
-            loading="lazy"
           />
         </div>
 
@@ -834,7 +829,6 @@ export default function StandaloneLanding() {
                 width={36}
                 height={36}
                 className="h-9 w-9"
-                loading="lazy"
               />
               <span className="text-xl font-black tracking-tight text-amber-400">
                 Beef.Money
@@ -893,7 +887,6 @@ export default function StandaloneLanding() {
                   alt="Beef.Money open source code on GitHub"
                   width={24}
                   height={24}
-                  loading="lazy"
                 />
               </a>
               <a
@@ -907,7 +900,6 @@ export default function StandaloneLanding() {
                   alt="Beef.Money on Nostr decentralized network"
                   width={32}
                   height={32}
-                  loading="lazy"
                 />
               </a>
               <a
@@ -921,7 +913,6 @@ export default function StandaloneLanding() {
                   alt="Follow Beef.Money on X (Twitter)"
                   width={24}
                   height={24}
-                  loading="lazy"
                 />
               </a>
               <a
@@ -935,7 +926,6 @@ export default function StandaloneLanding() {
                   alt="Beef.Money YouTube channel"
                   width={24}
                   height={24}
-                  loading="lazy"
                 />
               </a>
               <a
@@ -949,7 +939,6 @@ export default function StandaloneLanding() {
                   alt="Beef.Money on Instagram"
                   width={24}
                   height={24}
-                  loading="lazy"
                 />
               </a>
             </div>
