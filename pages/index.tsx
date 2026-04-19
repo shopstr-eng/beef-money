@@ -128,8 +128,6 @@ function YouTubeCarousel() {
 
 export default function StandaloneLanding() {
   const router = useRouter();
-  const [contactType, setContactType] = useState<"email" | "nostr">("email");
-  const [contact, setContact] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSignInOpen, setIsSignInOpen] = useState(false);
 
@@ -139,66 +137,6 @@ export default function StandaloneLanding() {
       router.push("/marketplace");
     }
   }, [router.pathname, signerContext.isLoggedIn]);
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState<{
-    type: "success" | "error";
-    text: string;
-  } | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!contact.trim() || !isValidContact) return;
-
-    setIsSubmitting(true);
-    setSubmitMessage(null);
-
-    try {
-      const response = await fetch("/api/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          contact: contact.trim(),
-          contactType,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitMessage({
-          type: "success",
-          text: "Thanks for signing up! We'll keep you updated on new ranchers and products.",
-        });
-        setContact("");
-      } else {
-        setSubmitMessage({
-          type: "error",
-          text: data.error || "Something went wrong! Please try again.",
-        });
-      }
-    } catch (error) {
-      setSubmitMessage({
-        type: "error",
-        text: "Network error! Please check your connection and try again.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const isValidEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
-  const isValidNostrPub = (npub: string) => {
-    return npub.startsWith("npub1") && npub.length === 63;
-  };
-
-  const isValidContact =
-    contactType === "email" ? isValidEmail(contact) : isValidNostrPub(contact);
 
   const BrandmarkPattern = () => (
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
@@ -674,106 +612,6 @@ export default function StandaloneLanding() {
               question="I'm a rancher. How do I list my products?"
               answer="It's free and takes just a few minutes. Click 'Sell Your Beef' in the navigation, create your profile, and start adding products. You set your own prices, pickup options, and payment methods."
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Signup Form Section */}
-      <section
-        id="signup"
-        className="relative z-10 overflow-hidden border-b-2 border-amber-900 bg-amber-50 py-16"
-      >
-        <div className="relative z-10 mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-3xl font-black text-stone-900 md:text-4xl">
-            Stay in the Loop
-          </h2>
-          <p className="mb-8 text-lg text-stone-600">
-            Get updates on new ranches, products, and the food freedom movement
-          </p>
-
-          <div className="rounded-lg border-2 border-amber-900 bg-white p-8 text-left shadow-[4px_4px_0px_#78350f]">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="mb-2 block text-base font-bold">
-                  How would you like us to reach you?
-                </label>
-                <div className="flex gap-6">
-                  <label className="flex cursor-pointer items-center">
-                    <input
-                      type="radio"
-                      name="contactType"
-                      value="email"
-                      checked={contactType === "email"}
-                      onChange={() => setContactType("email")}
-                      className="mr-2 accent-amber-800"
-                    />
-                    Email
-                  </label>
-                  <label className="flex cursor-pointer items-center">
-                    <input
-                      type="radio"
-                      name="contactType"
-                      value="nostr"
-                      checked={contactType === "nostr"}
-                      onChange={() => setContactType("nostr")}
-                      className="mr-2 accent-amber-800"
-                    />
-                    Nostr
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="contact"
-                  className="mb-2 block text-base font-bold"
-                >
-                  {contactType === "email"
-                    ? "Email Address"
-                    : "Nostr Public Key (npub)"}
-                </label>
-                <input
-                  id="contact"
-                  type="text"
-                  value={contact}
-                  onChange={(e) => setContact(e.target.value)}
-                  placeholder={
-                    contactType === "email" ? "your@email.com" : "npub1..."
-                  }
-                  className="w-full rounded-lg border-2 border-amber-900 p-3 shadow-[2px_2px_0px_#78350f] focus:outline-none"
-                  style={{ backgroundColor: "#fef3c7" }}
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={!isValidContact || isSubmitting}
-                className="w-full rounded-lg border-2 border-amber-900 bg-amber-800 px-6 py-3 font-bold text-white shadow-[4px_4px_0px_#78350f] transition-all hover:-translate-y-0.5 hover:bg-amber-700 active:translate-y-0 active:shadow-none disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {isSubmitting ? "Submitting..." : "Get Updates"}
-              </button>
-            </form>
-
-            {submitMessage && (
-              <div
-                className={`mt-4 rounded-lg p-4 ${
-                  submitMessage.type === "success"
-                    ? "border border-green-200 bg-green-100 text-green-800"
-                    : "border border-red-200 bg-red-100 text-red-800"
-                }`}
-              >
-                <p className="flex items-center space-x-2">
-                  <span>
-                    {submitMessage.type === "success" ? "&#10003;" : "&#10007;"}
-                  </span>
-                  <span>{submitMessage.text}</span>
-                </p>
-              </div>
-            )}
-
-            <div className="mt-6 text-center text-sm text-stone-500">
-              <p>Your contact info stays private and will never be shared</p>
-            </div>
           </div>
         </div>
       </section>
